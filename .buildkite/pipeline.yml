@@ -1,0 +1,6 @@
+steps:
+  - label: "build"
+    command: "./build.sh"
+
+  - label: "test"
+    command: "./test.sh"
