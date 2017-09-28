@@ -2,5 +2,6 @@ steps:
   - label: "build"
     command: "./build.sh"
 
+  - wait
   - label: "test"
     command: "./test.sh"
