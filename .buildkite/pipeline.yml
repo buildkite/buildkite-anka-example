@@ -10,6 +10,6 @@ steps:
   - label: "Unit Tests"
     command: "./test.sh 'Buildkite Anka DemoTests'"
 
-  - label: "test"
+  - wait
+  - label: "UI Tests"
     command: "./test.sh 'Buildkite Anka DemoUITests'"
-
