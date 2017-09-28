@@ -9,4 +9,4 @@ anka run "$ANKA_IMAGE_NAME" xcodebuild build-for-testing \
   -derivedDataPath "build"
 
 echo "--- Uploading build artifacts"
-buildkite-agent artifact upload "build/**/*"
+buildkite-agent artifact upload "build/Build/Products/*.xctestrun"
