@@ -8,4 +8,4 @@ xcodebuild test-without-building \
 -scheme "Buildkite Anka Demo" \
 -sdk iphonesimulator \
 -destination "platform=iOS Simulator,name=iPhone 7,OS=10.3.1" \
--derivedDataPath "build"
+-derivedDataPath "build"  | xcpretty
