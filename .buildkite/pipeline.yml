@@ -1,3 +1,7 @@
+env:
+  ANKA_IMAGE_NAME: macos-10.12-xcode-8.3.3
+  XCODE_DESTINATION: platform=iOS Simulator,name=iPhone 7,OS=10.3.1
+
 steps:
   - label: "build"
     command: "./build.sh"

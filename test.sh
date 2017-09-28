@@ -1,11 +1,13 @@
 #!/bin/bash
 set -euo pipefail
 
+echo "--- Downloading build artifacts"
 buildkite-agent artifact download "build/**" .
 
-xcodebuild test-without-building \
--project "Buildkite Anka Demo.xcodeproj" \
--scheme "Buildkite Anka Demo" \
--sdk iphonesimulator \
--destination "platform=iOS Simulator,name=iPhone 7,OS=10.3.1" \
--derivedDataPath "build"  | xcpretty
+echo "+++ Running tests in $ANKA_IMAGE_NAME"
+anka run "$ANKA_IMAGE_NAME" xcodebuild test-without-building \
+  -project "Buildkite Anka Demo.xcodeproj" \
+  -scheme "Buildkite Anka Demo" \
+  -sdk iphonesimulator \
+  -destination "$XCODE_DESTINATION" \
+  -derivedDataPath "build"

@@ -1,10 +1,12 @@
 #!/bin/bash
 set -euo pipefail
 
-xcodebuild clean build-for-testing \
--project "Buildkite Anka Demo.xcodeproj" \
--scheme "Buildkite Anka Demo" \
--destination "platform=iOS Simulator,name=iPhone 7,OS=10.3.1" \
--derivedDataPath "build" | xcpretty
+echo "+++ Building app in $ANKA_IMAGE_NAME"
+anka run "$ANKA_IMAGE_NAME" xcodebuild build-for-testing \
+  -project "Buildkite Anka Demo.xcodeproj" \
+  -scheme "Buildkite Anka Demo" \
+  -destination "$XCODE_DESTINATION" \
+  -derivedDataPath "build"
 
+echo "--- Uploading build artifacts"
 buildkite-agent artifact upload "build/**/*"
