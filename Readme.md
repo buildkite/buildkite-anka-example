@@ -2,7 +2,7 @@
 
 [![Add to Buildkite](https://buildkite.com/button.svg)](https://buildkite.com/new)
 
-An example of running Xcode 8.3 unit, performance and UI tests using `xcodebuild` in an Anka[Fastlane](https://fastlane.tools) virtual machine  and [Buildkite](https://buildkite.com/).
+An example of running Xcode 8.3 unit, performance and UI tests using `xcodebuild` in an [Anka](https://veertu.com/) virtual machine  and [Buildkite](https://buildkite.com/).
 
 ## Requirements
 

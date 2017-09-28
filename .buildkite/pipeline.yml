@@ -1,4 +1,8 @@
 steps:
+  - label: "check code signing"
+    command: "./check-signing.sh"
+
+  - wait
   - label: "build"
     command: "./build.sh"
 

@@ -10,7 +10,7 @@ class Buildkite_Anka_DemoTests: XCTestCase {
     
     func testPerformanceExample() {
         self.measure {
-            XCTAssert(1 == 1)
+            1 == 1
         }
     }
     
