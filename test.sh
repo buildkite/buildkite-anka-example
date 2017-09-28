@@ -1,6 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
+buildkite-agent artifact download "build/**" .
+
 xcodebuild test-without-building \
 -project "Buildkite Anka Demo.xcodeproj" \
 -scheme "Buildkite Anka Demo" \
