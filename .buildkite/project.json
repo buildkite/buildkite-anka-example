@@ -1,6 +1,6 @@
 {
-  "name": "Fastlane Example",
-  "repository": "https://github.com/buildkite/buildkite-fastlane-demo.git",
+  "name": "Anka Example",
+  "repository": "https://github.com/buildkite/buildkite-anka-example.git",
   "steps": [
     {
       "type": "script",
