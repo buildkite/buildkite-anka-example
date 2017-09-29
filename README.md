@@ -8,15 +8,15 @@ An example of running Xcode 8.3 unit, performance and UI tests using `xcodebuild
 
 This takes a bit of setup. I'm using a Mac Pro at [Macstadium](https://www.macstadium.com/), but you could just as easily use any Mac that you have available.
 
-* Veertu Anka
+### Veertu Anka
 
 You will need to install the [Anka][] virtualization tool. I used [Anka Build (Beta) version 1.0.1 (build 72)](https://ankadoc.bitbucket.io/) for this demo.
 
-* Base Images
+### Base Images
 
 Like Docker, [Anka][] uses images to run. You can either prepare your own base image with a recent macOS and XCode, or you can use the [Packer templates](https://github.com/buildkite/anka-packer-images) that we've built.
 
-* Buildkite-Agent on your Host Machine
+### Buildkite-Agent on your Host Machine
 
 You will need [`buildkite-agent` installed](https://buildkite.com/docs/agent/osx) on the same machine that you installed Anka on. It receives the builds and manages the Anka containers.
 
